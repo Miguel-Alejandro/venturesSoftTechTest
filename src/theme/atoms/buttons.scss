@@ -1,0 +1,11 @@
+.primary--button{
+    background-color: var(--color-primary) !important;
+}
+
+.secondary--button{
+    color: var(--color-text-primary) !important;
+
+    mat-icon {
+        color: var(--color-text-primary);
+    }
+}
