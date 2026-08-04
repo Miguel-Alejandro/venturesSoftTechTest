@@ -1,0 +1,9 @@
+<div class="category">
+    @for (category of categoryData; track $index) {
+        <div class="category__item">
+            <mat-chip-set aria-label="Fish selection">
+              <mat-chip>{{category.description}}</mat-chip>
+            </mat-chip-set>
+        </div>
+    }
+</div>
