@@ -1,4 +1,4 @@
-export class ResponseObject<T>{
+export class ApiResponse<T> {
     error: boolean;
     codigo: string;
     message: string;

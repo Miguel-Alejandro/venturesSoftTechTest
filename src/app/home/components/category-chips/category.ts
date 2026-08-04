@@ -1,5 +1,5 @@
-import { Component, inject, input, OnInit } from '@angular/core';
-import { CategoryService } from '../../../services/category-service/category-service';
+import { Component, inject, OnInit } from '@angular/core';
+import { CategoryService } from '../../services/category/category';
 import { MatChipsModule } from '@angular/material/chips';
 import { firstValueFrom } from 'rxjs';
 
@@ -9,8 +9,8 @@ import { firstValueFrom } from 'rxjs';
   templateUrl: './category.html',
   styleUrl: './category.scss',
 })
-export class Category implements OnInit {
-  public categoryData = Array();
+export class CategoryChips implements OnInit {
+  protected categoryData = Array();
   private readonly categorySrv = inject(CategoryService);
 
   ngOnInit(): void {

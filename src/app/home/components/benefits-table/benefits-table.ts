@@ -13,6 +13,6 @@ import { Benefits } from '../../services/benefits/benefits';
 export class BenefitsTable {
   private readonly benefitsSrv = inject(Benefits);
 
-  displayedColumns: string[] = ['benefitName', 'noCardLinkingRequired', 'linkYourCardGoGet'];
-  dataSource = this.benefitsSrv.benefitDataTable;
+  protected readonly displayedColumns: string[] = ['benefitName', 'noCardLinkingRequired', 'linkYourCardGoGet'];
+  protected readonly dataSource = this.benefitsSrv.benefitDataTable;
 }

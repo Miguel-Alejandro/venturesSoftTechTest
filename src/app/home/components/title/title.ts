@@ -7,5 +7,5 @@ import { Component, input } from '@angular/core';
   styleUrl: './title.scss',
 })
 export class Title {
-  public title = input.required<string>();
+  readonly title = input.required<string>();
 }
