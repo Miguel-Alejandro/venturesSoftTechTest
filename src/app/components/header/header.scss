@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.header__actions{
+    .login{
+        color: var(--color-text-primary);
+        margin-right: 10px;
+
+        mat-icon {
+            color: var(--color-text-primary);
+        }
+
+    }
+
+    .link-your-card{
+        background-color: var(--color-primary);
+
+    }
+}
