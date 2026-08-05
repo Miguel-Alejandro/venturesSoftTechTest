@@ -14,7 +14,7 @@ export class CategoryService {
   private readonly builderSrv = inject(BuilderPattern);
   private readonly http = inject(HttpClient);
 
-  public getCategorys(): Observable<ApiResponse<Category>>{
+  public getCategories(): Observable<ApiResponse<Category>>{
     return this.http.get(`${environment.apiUrl}/Categorias`).pipe(
       map((response) => this.builderSrv.BuildCategoryClass(response))
     )
