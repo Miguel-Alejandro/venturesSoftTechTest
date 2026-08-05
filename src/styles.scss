@@ -9,6 +9,7 @@
 @use "./theme/atoms/buttons.scss";
 @use "./theme/atoms/text.scss";
 @use "./theme/atoms/chips.scss";
+@use "./theme/molecules/cards.scss";
 
 html {
   @include mat.theme((
