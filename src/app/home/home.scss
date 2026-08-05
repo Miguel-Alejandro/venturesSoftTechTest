@@ -12,3 +12,9 @@
     width: 67%;
     margin: auto;
 }
+
+.home__instant-coupons{
+    @extend .home__categories;
+    width: 90%;
+    margin-top: 4rem;
+}

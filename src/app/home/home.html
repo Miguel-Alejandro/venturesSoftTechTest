@@ -7,6 +7,10 @@
 
     <section class="home__categories">
         <app-title [title]="cuponsTitle" size="medium"></app-title>
-        <app-category></app-category>
+        <app-category (categorySelected)="categorySelected($event)"></app-category>
     </section>
+
+    <div class="home__instant-coupons">
+        <app-instant-coupons-cards [idMenu]="idMenu()"></app-instant-coupons-cards>
+    </div>
 </main>
