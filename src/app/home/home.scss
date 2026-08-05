@@ -11,10 +11,12 @@
 .home__categories{
     width: 67%;
     margin: auto;
+    margin-top: 5rem;
 }
 
 .home__instant-coupons{
     @extend .home__categories;
     width: 90%;
     margin-top: 4rem;
+    margin-bottom: 3rem;
 }

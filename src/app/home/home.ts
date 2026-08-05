@@ -4,10 +4,11 @@ import { Title } from './components/title/title';
 import { BenefitsTable } from './components/benefits-table/benefits-table';
 import { CategoryChips } from './components/category-chips/category';
 import { InstantCouponsCards } from "./components/instant-coupons-cards/instant-coupons-cards";
+import { Cashback } from './components/cashback/cashback';
 
 @Component({
   selector: 'app-home',
-  imports: [Header, Title, BenefitsTable, CategoryChips, InstantCouponsCards],
+  imports: [Header, Title, BenefitsTable, CategoryChips, InstantCouponsCards, Cashback],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
