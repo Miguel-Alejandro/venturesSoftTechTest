@@ -1,0 +1,13 @@
+<div class="category">
+    @for (category of categoryData; track $index) {
+        <div class="category__item">
+              <mat-chip
+                (click)="selectCategory(category.idMenu)"
+                [ngClass]="{
+                    'active--chip': category.idMenu === categoryId(),
+                    'default--chip': category.idMenu != categoryId()
+                }"
+                >{{category.description}}</mat-chip>
+        </div>
+    }
+</div>

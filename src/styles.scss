@@ -8,6 +8,7 @@
 @use "./theme/colors/variables.scss";
 @use "./theme/atoms/buttons.scss";
 @use "./theme/atoms/text.scss";
+@use "./theme/atoms/chips.scss";
 
 html {
   @include mat.theme((

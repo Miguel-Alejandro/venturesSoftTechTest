@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import { IBenefitsTableData } from '../../interfaces/benefits-table.interface';
+import { BenefitsTableData } from '../../../shared/interfaces/benefits-table';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Benefits {
 
-  public readonly benefitDataTable: Array<IBenefitsTableData> = [
+  public readonly benefitDataTable: Array<BenefitsTableData> = [
     { benefitName: 'Instant cupons', noCardLinkingRequired: true, linkYourCardGoGet: true},
     { benefitName: 'Full access to visa savings edge benefits', noCardLinkingRequired: false, linkYourCardGoGet: true},
     { benefitName: 'Cashback traking', noCardLinkingRequired: false, linkYourCardGoGet: true},
     { benefitName: 'location search', noCardLinkingRequired: false, linkYourCardGoGet: true},
     { benefitName: 'Cashback offers', noCardLinkingRequired: false, linkYourCardGoGet: true},
   ];
-  
+
 }
