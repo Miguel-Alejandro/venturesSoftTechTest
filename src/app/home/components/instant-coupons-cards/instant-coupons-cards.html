@@ -41,7 +41,7 @@ class="instant-coupons"
         </div>
     </div>
     <div class="instant-coupons__cards">
-        @for (instantCoupon of instantCouponsData(); track $index) {
+        @for (instantCoupon of displayedCoupons(); track $index) {
             <mat-card class="instant-coupons-card" appearance="outlined">
                 <img mat-card-image [src]="instantCoupon.image" alt="Photo of a Shiba Inu">
                 <mat-card-content>
@@ -57,6 +57,16 @@ class="instant-coupons"
                 </mat-card-actions>
             </mat-card>
         }
-
     </div>
+
+    @if(hasMore()){
+        <div class="load-more-coupons">
+            <button
+            (click)="showMore()" 
+            matButton>
+                MORE INSTANT COUPONS
+                 <mat-icon iconPositionEnd>expand_more</mat-icon>
+            </button>
+        </div>
+    }
 </div>

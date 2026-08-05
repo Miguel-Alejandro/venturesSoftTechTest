@@ -31,12 +31,17 @@ export class InstantCouponsCards implements OnInit {
   protected isList = signal<boolean>(false);
   protected instantCouponsData = signal<Array<InstantCoupons>>(null);
 
-  private collactor = new Intl.Collator(undefined,{numeric: true, sensitivity: 'base'});
+  private collator = new Intl.Collator(undefined,{numeric: true, sensitivity: 'base'});
   private readonly instantCouponsSrv = inject(InstantCouponsService);
+
+  protected readonly displayCount = signal<number>(7);
+  private readonly pageSize = 7;
+
   constructor(){
     effect(() => {
       this.idMenu();
       this.sortRule.set(null);
+      this.displayCount.set(7);
       this.getInstantCoupons();
     });
   }
@@ -45,13 +50,37 @@ export class InstantCouponsCards implements OnInit {
     this.getInstantCoupons()
   }
 
+  protected readonly sortedCoupons = computed(() => {
+    const data = this.instantCouponsData();
+    const rule = this.sortRule();
+    
+    if (!data) return [];
+    if (!rule) return [...data];
+    
+    return [...data].sort((a, b) => 
+      this.collator.compare(a[rule], b[rule])
+    );
+  });
+
+  protected readonly displayedCoupons = computed(() => {
+    return this.sortedCoupons().slice(0, this.displayCount());
+  });
+
+   protected showMore(): void {
+    const remainingElm = this.sortedCoupons().length - this.pageSize
+    this.displayCount.update(count => count + remainingElm);
+  }
+
+  protected readonly hasMore = computed(() => 
+    this.displayCount() < this.sortedCoupons().length
+  );
+
   protected changeCardsView(showListView:boolean): void {
     showListView ? this.isList.set(showListView) : this.isList.set(showListView); 
   }
 
   protected sortBy(sortRule: SortCoupons ): void {
     this.sortRule.set(sortRule);
-    this.instantCouponsData().sort((a, b) => this.collactor.compare(a[sortRule], b[sortRule]));
   }
 
   private async getInstantCoupons(): Promise<void> {

@@ -43,7 +43,6 @@
     color: var(--color-white);
 }
 
-//*******+
 
 .instant-coupons__cards{
     display: flex;
@@ -96,4 +95,14 @@
     font-weight: bold;
     margin: 0;
     margin-top: 5px;
+}
+
+.load-more-coupons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button{
+        color: var(--color-text-primary);
+    }
 }
