@@ -1,4 +1,4 @@
-import { Component, effect, inject, input, OnInit, signal } from '@angular/core';
+import { Component, computed, effect, inject, input, OnInit, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { InstantCouponsService } from '../../services/instant-cupons/instant-coupons';
 import { InstantCoupons } from '../../../shared/models/instant-coupons';
@@ -6,24 +6,37 @@ import { firstValueFrom } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+import { SortCoupons } from '../../../shared/types/sort-coupons';
 
 @Component({
   selector: 'app-instant-coupons-cards',
-  imports: [MatCardModule, MatButtonModule, MatIconModule, CommonModule],
+  imports: [
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatMenuModule,
+    CommonModule,
+  ],
   templateUrl: './instant-coupons-cards.html',
   styleUrl: './instant-coupons-cards.scss',
 })
 export class InstantCouponsCards implements OnInit {
-  protected instantCouponsData = signal<Array<InstantCoupons>>(null);
-  protected isList = signal<boolean>(false);
 
   public idMenu = input.required<number>();
-  
-  private readonly instantCouponsSrv = inject(InstantCouponsService);
 
+  protected readonly sortRule = signal<SortCoupons>(null);
+  protected isList = signal<boolean>(false);
+  protected instantCouponsData = signal<Array<InstantCoupons>>(null);
+
+  private collactor = new Intl.Collator(undefined,{numeric: true, sensitivity: 'base'});
+  private readonly instantCouponsSrv = inject(InstantCouponsService);
   constructor(){
     effect(() => {
       this.idMenu();
+      this.sortRule.set(null);
       this.getInstantCoupons();
     });
   }
@@ -34,6 +47,11 @@ export class InstantCouponsCards implements OnInit {
 
   protected changeCardsView(showListView:boolean): void {
     showListView ? this.isList.set(showListView) : this.isList.set(showListView); 
+  }
+
+  protected sortBy(sortRule: SortCoupons ): void {
+    this.sortRule.set(sortRule);
+    this.instantCouponsData().sort((a, b) => this.collactor.compare(a[sortRule], b[sortRule]));
   }
 
   private async getInstantCoupons(): Promise<void> {

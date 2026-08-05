@@ -77,9 +77,11 @@
 }
 
 .filters-actions{
+    display: flex;
+    align-items: center;
     margin-right: 21px;
 
-    .list-view{
+    .list-view, .squere-view{
         margin-right: 10px;
     }
 }

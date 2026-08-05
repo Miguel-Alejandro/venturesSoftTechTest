@@ -22,6 +22,22 @@ class="instant-coupons"
             (click)="changeCardsView(false)">
                 <mat-icon>view_module</mat-icon>
             </button>
+
+            <button matButton="outlined" [matMenuTriggerFor]="menu" #menuTrigger>
+                SORT BY 
+                @if(sortRule() === 'brandName'){ TITLE }
+                @if(sortRule() === 'description'){ DESCRIPTION }
+                <mat-icon iconPositionEnd>arrow_drop_down</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button 
+                (click)="sortBy('brandName')"
+                mat-menu-item >Title</button>
+
+                <button
+                (click)="sortBy('description')"
+                mat-menu-item >Description</button>
+            </mat-menu>
         </div>
     </div>
     <div class="instant-coupons__cards">
