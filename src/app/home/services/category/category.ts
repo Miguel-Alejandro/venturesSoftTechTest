@@ -16,7 +16,7 @@ export class CategoryService {
 
   public getCategories(): Observable<ApiResponse<Category>>{
     return this.http.get(`${environment.apiUrl}/Categorias`).pipe(
-      map((response) => this.builderSrv.BuildCategoryClass(response))
+      map((response) => this.builderSrv.buildCategoryClass(response))
     )
   }
 }

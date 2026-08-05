@@ -14,12 +14,13 @@ import { CommonModule } from '@angular/common';
 export class CategoryChips implements OnInit {
   public categorySelected = output<number>();
   protected categoryData:Array<Category>;
-  protected categoryId = signal<number>(0);
+  protected categoryId = signal<number>(1001);
 
   private readonly categorySrv = inject(CategoryService);
 
   ngOnInit(): void {
     this.getCategories();
+    this.categorySelected.emit(1001);
   }
 
   protected selectCategory(idMenu:number): void {
