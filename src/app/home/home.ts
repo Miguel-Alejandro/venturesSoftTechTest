@@ -12,4 +12,5 @@ import { CategoryChips } from './components/category-chips/category';
 })
 export class Home {
   protected homeTitle: string = "Link your business card to unlock cashback offers";
+  protected cuponsTitle: string = "Explore Instant Cupons"
 }

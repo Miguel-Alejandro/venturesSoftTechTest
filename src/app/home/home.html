@@ -1,11 +1,12 @@
 <app-header></app-header>
-<main class="home">
+<main class="home ">
     <section class="home__title">
         <app-title [title]="homeTitle"></app-title>
         <app-benefits-table></app-benefits-table>
     </section>
 
-    <section>
+    <section class="home__categories">
+        <app-title [title]="cuponsTitle" size="medium"></app-title>
         <app-category></app-category>
     </section>
 </main>
