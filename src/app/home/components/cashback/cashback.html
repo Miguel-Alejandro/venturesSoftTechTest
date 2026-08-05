@@ -1,0 +1,24 @@
+<div class="cashback">
+    <div class="cashback__title">
+        <h1>Unlock the full power of</h1>
+    </div>
+
+    <div class="cashback__cards">
+        @for (instantCoupon of selectedCoupons(); track $index) {
+            <mat-card class="instant-coupons-card" appearance="outlined">
+                <img mat-card-image [src]="instantCoupon.image" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <span class="instant-coupons-card__title">{{instantCoupon.brandName}}</span>
+                    <p class="instant-coupons-card__description">{{instantCoupon.description}}</p>
+                </mat-card-content>
+            </mat-card>
+        }
+    </div>
+
+    <div class="cashback__actions">
+        <button class="primary--button" matButton="filled">
+            LINK YOUR CARD
+            <mat-icon iconPositionEnd>chevron_right</mat-icon>
+        </button>
+    </div>
+</div>
