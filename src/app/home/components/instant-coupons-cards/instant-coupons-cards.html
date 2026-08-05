@@ -1,0 +1,46 @@
+<div 
+class="instant-coupons"
+[ngClass]="{'cards-list-view': isList()}">
+    <div class="instant-coupons__filters">
+        <div class="filters-title">
+            <h3>Featured Instant Coupons (200)</h3>
+        </div>
+
+        <div class="filters-actions">
+            <button
+            [ngClass]="{'button--view--active': isList()}"
+            class="list-view"
+            mat-icon-button 
+            (click)="changeCardsView(true)">
+                <mat-icon>view_list</mat-icon>
+            </button>
+            
+            <button 
+            [ngClass]="{'button--view--active': !isList()}"
+            class="squere-view"
+            mat-icon-button
+            (click)="changeCardsView(false)">
+                <mat-icon>view_module</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="instant-coupons__cards">
+        @for (instantCoupon of instantCouponsData(); track $index) {
+            <mat-card class="instant-coupons-card" appearance="outlined">
+                <img mat-card-image [src]="instantCoupon.image" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <span class="instant-coupons-card__title">{{instantCoupon.brandName}}</span>
+                    <p class="instant-coupons-card__description">{{instantCoupon.description}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                     <button matButton>
+                        Get Coupon
+                        <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+                    </button>
+                     
+                </mat-card-actions>
+            </mat-card>
+        }
+
+    </div>
+</div>

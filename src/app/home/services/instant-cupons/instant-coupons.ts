@@ -17,7 +17,7 @@ export class InstantCouponsService {
     let params = new HttpParams()
      .set('idMenu', idMenu);
     
-    return this.http.get(`${environment.apiUrl}/Categorias`, {params}).pipe(
+    return this.http.get(`${environment.apiUrl}/Marcas`, {params}).pipe(
       map((response) => this.builderSrv.buildInstantCouponsClass(response))
     )
   }
