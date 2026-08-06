@@ -3,7 +3,7 @@
    
     <ng-container matColumnDef="benefitName">
       <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let element">{{ element.benefitName }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.benefitName | translate }}</td>
     </ng-container>
 
     <ng-container matColumnDef="noCardLinkingRequired">
