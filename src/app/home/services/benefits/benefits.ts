@@ -7,7 +7,7 @@ import { BenefitsTableData } from '../../../shared/interfaces/benefits-table';
 export class Benefits {
 
   public readonly benefitDataTable: Array<BenefitsTableData> = [
-    { benefitName: 'Instant cupons', noCardLinkingRequired: true, linkYourCardGoGet: true},
+    { benefitName: 'Instant coupons', noCardLinkingRequired: true, linkYourCardGoGet: true},
     { benefitName: 'Full access to visa savings edge benefits', noCardLinkingRequired: false, linkYourCardGoGet: true},
     { benefitName: 'Cashback traking', noCardLinkingRequired: false, linkYourCardGoGet: true},
     { benefitName: 'location search', noCardLinkingRequired: false, linkYourCardGoGet: true},
