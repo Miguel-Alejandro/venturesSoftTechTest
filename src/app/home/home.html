@@ -4,12 +4,12 @@
     <div class="bullet--blur--2"></div>
     <div class="bullet--blur--3"></div>
     <section class="home__title">
-        <app-title [title]="homeTitle"></app-title>
+        <app-title [title]="homeTitle()"></app-title>
         <app-benefits-table></app-benefits-table>
     </section>
 
     <section class="home__categories">
-        <app-title [title]="cuponsTitle" size="medium"></app-title>
+        <app-title [title]="cuponsTitle()" size="medium"></app-title>
         <app-category (categorySelected)="categorySelected($event)"></app-category>
     </section>
 
