@@ -8,6 +8,9 @@
             <mat-card class="instant-coupons-card" appearance="outlined">
                 <img mat-card-image [src]="instantCoupon.image" alt="Photo of a Shiba Inu">
                 <mat-card-content>
+                    <mat-chip class="cashback--chip">
+                        Cashback
+                    </mat-chip>
                     <span class="instant-coupons-card__title">{{instantCoupon.brandName}}</span>
                     <p class="instant-coupons-card__description">{{instantCoupon.description}}</p>
                 </mat-card-content>

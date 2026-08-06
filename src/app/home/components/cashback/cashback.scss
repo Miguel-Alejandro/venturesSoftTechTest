@@ -16,6 +16,12 @@
             height: 180px;
             object-fit: cover;
         }
+
+        mat-card-content{
+            span{
+                display: block;
+            }
+        }
     }
 }
 

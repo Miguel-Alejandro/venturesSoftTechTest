@@ -5,10 +5,11 @@ import { firstValueFrom } from 'rxjs';
 import { InstantCoupons } from '../../../shared/models/instant-coupons';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-cashback',
-  imports: [MatButtonModule, MatCardModule, MatIconModule],
+  imports: [MatButtonModule, MatCardModule, MatIconModule, MatChipsModule],
   templateUrl: './cashback.html',
   styleUrl: './cashback.scss',
 })
