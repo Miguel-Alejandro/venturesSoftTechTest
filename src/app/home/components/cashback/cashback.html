@@ -1,6 +1,6 @@
 <div class="cashback">
     <div class="cashback__title">
-        <h1>Unlock the full power of</h1>
+        <h1>{{ 'CASHBACK.TITLE' | translate }}</h1>
     </div>
 
     <div class="cashback__cards">
@@ -9,7 +9,7 @@
                 <img mat-card-image [src]="instantCoupon.image" alt="Photo of a Shiba Inu">
                 <mat-card-content>
                     <mat-chip class="cashback--chip">
-                        Cashback
+                        {{ 'CASHBACK.CHIP_LABEL' | translate }}
                     </mat-chip>
                     <span class="instant-coupons-card__title">{{instantCoupon.brandName}}</span>
                     <p class="instant-coupons-card__description">{{instantCoupon.description}}</p>
@@ -20,7 +20,7 @@
 
     <div class="cashback__actions">
         <button class="primary--button" matButton="filled">
-            LINK YOUR CARD
+            {{ 'CASHBACK.ACTION' | translate }}
             <mat-icon iconPositionEnd>chevron_right</mat-icon>
         </button>
     </div>
