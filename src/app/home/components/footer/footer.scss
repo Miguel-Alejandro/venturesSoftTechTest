@@ -1,0 +1,23 @@
+.footer{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-background-soft);
+    height: 100px;
+    padding-left: 15rem;
+
+    span{
+        margin-right: 20px;
+        color: var(--color-primary-light);
+    }
+}
+
+@media(max-width: 1200px){
+    .footer{
+        padding-left: 10rem;
+    }
+}
+@media(max-width: 992px){
+    .footer{
+        padding-left: 4rem;
+    }
+}

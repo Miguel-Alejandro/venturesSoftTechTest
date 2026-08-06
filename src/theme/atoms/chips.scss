@@ -1,0 +1,31 @@
+.active--chip{
+   --mat-chip-elevated-container-color: var(--color-black);
+    --mat-chip-elevated-selected-container-color: var(--color-black);
+    --mat-chip-label-text-color: var(--color-white);
+    --mat-chip-selected-label-text-color: var(--color-white);
+    --mat-chip-outline-width: 0;
+}
+
+.default--chip{
+    --mat-chip-elevated-container-color: var(--color-border);
+    --mat-chip-elevated-selected-container-color: var(--color-border);
+    --mat-chip-label-text-color: var(--color-black);
+    --mat-chip-selected-label-text-color: var(--color-black);
+    --mat-chip-outline-width: 0;
+
+}
+
+.coupon--chip{
+    --mat-chip-elevated-container-color: var(--color-tag-bg);
+    --mat-chip-elevated-selected-container-color: var(--color-tag-bg);
+    --mat-chip-label-text-color: #645500;
+    --mat-chip-selected-label-text-color: #645500;
+    --mat-chip-outline-width: 0;
+}
+.cashback--chip{
+    --mat-chip-elevated-container-color: #cbe1ff;
+    --mat-chip-elevated-selected-container-color:#cbe1ff;
+    --mat-chip-label-text-color: #0047a9;
+    --mat-chip-selected-label-text-color: #0047a9;
+    --mat-chip-outline-width: 0;
+}

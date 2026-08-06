@@ -1,0 +1,75 @@
+<div 
+class="instant-coupons"
+[ngClass]="{'cards-list-view': isList()}">
+    <div class="instant-coupons__filters">
+        <div class="filters-title">
+            <h3>Featured Instant Coupons (200)</h3>
+        </div>
+
+        <div class="filters-actions">
+            <button
+            [ngClass]="{'button--view--active': isList()}"
+            class="list-view"
+            mat-icon-button 
+            (click)="changeCardsView(true)">
+                <mat-icon>view_list</mat-icon>
+            </button>
+            
+            <button 
+            [ngClass]="{'button--view--active': !isList()}"
+            class="squere-view"
+            mat-icon-button
+            (click)="changeCardsView(false)">
+                <mat-icon>view_module</mat-icon>
+            </button>
+
+            <button matButton="outlined" [matMenuTriggerFor]="menu" #menuTrigger>
+                SORT BY 
+                @if(sortRule() === 'brandName'){ TITLE }
+                @if(sortRule() === 'description'){ DESCRIPTION }
+                <mat-icon iconPositionEnd>arrow_drop_down</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button 
+                (click)="sortBy('brandName')"
+                mat-menu-item >Title</button>
+
+                <button
+                (click)="sortBy('description')"
+                mat-menu-item >Description</button>
+            </mat-menu>
+        </div>
+    </div>
+    <div class="instant-coupons__cards">
+        @for (instantCoupon of displayedCoupons(); track $index) {
+            <mat-card class="instant-coupons-card" appearance="outlined">
+                <img mat-card-image [src]="instantCoupon.image" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <mat-chip class="coupon--chip">
+                        Instant coupon
+                    </mat-chip>
+                    <span class="instant-coupons-card__title">{{instantCoupon.brandName}}</span>
+                    <p class="instant-coupons-card__description">{{instantCoupon.description}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                     <button matButton>
+                        Get Coupon
+                        <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+                    </button>
+                     
+                </mat-card-actions>
+            </mat-card>
+        }
+    </div>
+
+    @if(hasMore()){
+        <div class="load-more-coupons">
+            <button
+            (click)="showMore()" 
+            matButton>
+                MORE INSTANT COUPONS
+                <mat-icon iconPositionEnd>chevron_right</mat-icon>
+            </button>
+        </div>
+    }
+</div>

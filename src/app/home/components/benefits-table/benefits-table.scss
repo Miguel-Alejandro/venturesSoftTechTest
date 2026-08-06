@@ -1,0 +1,27 @@
+.table--center--text{
+    text-align: center;
+}
+
+.valid--check{
+    color: oklch(64.8% 0.2 131.684);
+}
+
+.invalid--check{
+    color: oklch(57.7% 0.245 27.325);
+}
+
+.benefits-table{
+    tr.mat-mdc-row,
+    th.mat-mdc-header-cell,
+    td.mat-mdc-cell {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+}
+
+.benefits-table__actions{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,25 @@
+.mx--title{
+    font-size: 34px;
+    text-align: center;
+}
+
+.md--title{
+    font-size: 25px;
+    text-align: center;
+}
+
+@media (max-width: 1200px){
+    .mx--title{
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 992px){
+    .mx--title{
+        font-size: 23px;
+    }
+
+    .md--title{
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,127 @@
+.cards-list-view {
+    .instant-coupons__cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .instant-coupons-card {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        
+        ::ng-deep {
+            .mat-mdc-card-image {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                margin: 0;
+            }
+            
+            .mat-mdc-card-content {
+                flex: 1;
+                padding: 0 1rem;
+            }
+            
+            .mat-mdc-card-actions {
+                margin-left: auto;
+                padding: 0;
+
+                button{
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.button--view--active{
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+}
+
+
+.instant-coupons__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+     mat-card{
+        img{
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+    }
+}
+
+.instant-coupons-card{
+    width: 21%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    mat-card-content{
+        padding-top: 10px;
+
+        span{
+            display: block;
+        }
+    }
+
+    mat-card-actions{
+        button{
+            color: var(--color-text-muted);
+        }
+    }
+
+}
+
+.instant-coupons__filters{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        padding: 0 70px;
+}
+
+.filters-title{
+    color: var(--color-text-primary);
+    font-weight: bold;
+}
+
+.filters-actions{
+    display: flex;
+    align-items: center;
+    margin-right: 21px;
+
+    .list-view, .squere-view{
+        margin-right: 10px;
+    }
+}
+
+.instant-coupons-card__title{
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin-top: 5px;
+}
+.instant-coupons-card__description{
+    color: var(--color-text-primary);
+    font-weight: bold;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.load-more-coupons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+    button{
+        color: var(--color-text-primary);
+    }
+}
