@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { SortCoupons } from '../../../shared/types/sort-coupons';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-instant-coupons-cards',
@@ -19,6 +20,7 @@ import { SortCoupons } from '../../../shared/types/sort-coupons';
     MatDialogModule,
     MatMenuModule,
     CommonModule,
+    MatChipsModule
   ],
   templateUrl: './instant-coupons-cards.html',
   styleUrl: './instant-coupons-cards.scss',
