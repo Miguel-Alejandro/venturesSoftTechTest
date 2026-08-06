@@ -15,7 +15,7 @@ import { Footer } from "./components/footer/footer";
 })
 export class Home {
   protected homeTitle: string = "Link your business card to unlock cashback offers";
-  protected cuponsTitle: string = "Explore Instant Cupons"
+  protected cuponsTitle: string = "Explore Instant Coupons"
   protected idMenu = signal<number>(0);
 
   public categorySelected($event): void {
