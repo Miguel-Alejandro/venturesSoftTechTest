@@ -1,0 +1,12 @@
+.language-switcher {
+    color: var(--color-primary-light);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    min-width: auto;
+    padding: 0 12px;
+
+    &:hover {
+        background-color: rgba(19, 53, 186, 0.08);
+    }
+}

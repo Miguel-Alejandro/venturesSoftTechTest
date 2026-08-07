@@ -6,10 +6,10 @@ import { firstValueFrom } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { SortCoupons } from '../../../shared/types/sort-coupons';
 import { MatChipsModule } from '@angular/material/chips';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-instant-coupons-cards',
@@ -17,10 +17,10 @@ import { MatChipsModule } from '@angular/material/chips';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule,
     MatMenuModule,
     CommonModule,
-    MatChipsModule
+    MatChipsModule,
+    TranslatePipe
   ],
   templateUrl: './instant-coupons-cards.html',
   styleUrl: './instant-coupons-cards.scss',

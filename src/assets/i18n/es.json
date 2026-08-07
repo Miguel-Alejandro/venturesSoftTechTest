@@ -1,0 +1,50 @@
+{
+    "HEADER": {
+        "LOGIN": "INICIAR SESIÓN",
+        "LINK_CARD": "VINCULAR TARJETA"
+    },
+    "HOME": {
+        "TITLE": "Vincula tu tarjeta de negocio para desbloquear ofertas de cashback",
+        "COUPONS_TITLE": "Explorar cupones instantáneos"
+    },
+    "BENEFITS_TABLE": {
+        "BENEFIT": "Beneficio",
+        "NO_CARD_REQUIRED": "No requiere vincular tarjeta",
+        "LINK_CARD_GET": "Vincula tu tarjeta para obtener",
+        "LINK_CARD_ACTION": "VINCULAR TARJETA",
+        "ROWS": {
+            "INSTANT_COUPONS": "Cupones instantáneos",
+            "VISA_SAVINGS": "Acceso completo a beneficios de Visa Savings Edge",
+            "CASHBACK_TRACKING": "Seguimiento de cashback",
+            "LOCATION_SEARCH": "Búsqueda de comerciantes",
+            "CASHBACK_OFFERS": "Ofertas de cashback"
+        }
+    },
+    "INSTANT_COUPONS": {
+        "TITLE": "Cupones destacados",
+        "SORT_BY": "ORDENAR POR",
+        "SORT_TITLE": "Título",
+        "SORT_DESCRIPTION": "Descripción",
+        "SORT_LABEL_TITLE": "TÍTULO",
+        "SORT_LABEL_DESCRIPTION": "DESCRIPCIÓN",
+        "CHIP_LABEL": "Cupón instantáneo",
+        "GET_COUPON": "Obtener cupón",
+        "MORE_COUPONS": "MÁS CUPONES INSTANTÁNEOS"
+    },
+    "CASHBACK": {
+        "TITLE": "Desbloquea todo el poder de",
+        "CHIP_LABEL": "Cashback",
+        "ACTION": "VINCULAR TARJETA"
+    },
+    "CATEGORIES": {
+        "RESTAURANT": "Restaurantes",
+        "SOFTWARE": "Software",
+        "GAS_STATION": "Gasolineras",
+        "AIRLINE": "Aerolíneas"
+    },
+    "FOOTER": {
+        "TERMS": "Términos y Condiciones",
+        "PRIVACY": "Política de Privacidad",
+        "LANGUAGE_SELECTOR": "Seleccionar idioma"
+    }
+}

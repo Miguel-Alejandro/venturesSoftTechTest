@@ -1,0 +1,50 @@
+{
+    "HEADER": {
+        "LOGIN": "LOGIN",
+        "LINK_CARD": "LINK YOUR CARD"
+    },
+    "HOME": {
+        "TITLE": "Link your business card to unlock cashback offers",
+        "COUPONS_TITLE": "Explore Instant Coupons"
+    },
+    "BENEFITS_TABLE": {
+        "BENEFIT": "Benefit",
+        "NO_CARD_REQUIRED": "No Card Linking Required",
+        "LINK_CARD_GET": "Link Your Card To Get",
+        "LINK_CARD_ACTION": "LINK YOUR CARD",
+        "ROWS": {
+            "INSTANT_COUPONS": "Instant Coupons",
+            "VISA_SAVINGS": "Full access to Visa Savings Edge benefits",
+            "CASHBACK_TRACKING": "Cashback Tracking",
+            "LOCATION_SEARCH": "Merchant Location Search",
+            "CASHBACK_OFFERS": "Cashback Offers"
+        }
+    },
+    "INSTANT_COUPONS": {
+        "TITLE": "Featured Instant Coupons",
+        "SORT_BY": "SORT BY",
+        "SORT_TITLE": "Title",
+        "SORT_DESCRIPTION": "Description",
+        "SORT_LABEL_TITLE": "TITLE",
+        "SORT_LABEL_DESCRIPTION": "DESCRIPTION",
+        "CHIP_LABEL": "Instant coupon",
+        "GET_COUPON": "Get Coupon",
+        "MORE_COUPONS": "MORE INSTANT COUPONS"
+    },
+    "CASHBACK": {
+        "TITLE": "Unlock the full power of",
+        "CHIP_LABEL": "Cashback",
+        "ACTION": "LINK YOUR CARD"
+    },
+    "CATEGORIES": {
+        "RESTAURANT": "Restaurants",
+        "SOFTWARE": "Software",
+        "GAS_STATION": "Gas Stations",
+        "AIRLINE": "Airlines"
+    },
+    "FOOTER": {
+        "TERMS": "Terms and Conditions",
+        "PRIVACY": "Privacy Policy",
+        "LANGUAGE_SELECTOR": "Select language"
+    }
+}

@@ -1,9 +1,10 @@
 .footer{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--color-background-soft);
     height: 100px;
-    padding-left: 15rem;
+    padding: 0 15rem;
 
     span{
         margin-right: 20px;
@@ -13,11 +14,11 @@
 
 @media(max-width: 1200px){
     .footer{
-        padding-left: 10rem;
+        padding: 0 10rem;
     }
 }
 @media(max-width: 992px){
     .footer{
-        padding-left: 4rem;
+        padding: 0 4rem;
     }
 }
