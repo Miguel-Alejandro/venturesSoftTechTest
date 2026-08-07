@@ -6,10 +6,11 @@ import { InstantCoupons } from '../../../shared/models/instant-coupons';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cashback',
-  imports: [MatButtonModule, MatCardModule, MatIconModule, MatChipsModule],
+  imports: [MatButtonModule, MatCardModule, MatIconModule, MatChipsModule, TranslatePipe],
   templateUrl: './cashback.html',
   styleUrl: './cashback.scss',
 })
